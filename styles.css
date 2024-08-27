@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: lightgray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    background: rgb(39, 107, 152);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.display{
+    font-size: 2em;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: lightblue;
+    color: white;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.left-buttons, .right-buttons{
+    display: grid;
+    gap: 10px;
+}
+
+.left-buttons{
+    grid-template-columns: repeat(3, 1fr);
+    flex: 2;
+    margin-right: 10px;
+}
+
+.right-buttons{
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+}
+
+.btn{
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lightblue{
+    background: rgb(140, 212, 236);
+    color: white;
+}
+
+.yellow{
+    background: rgb(204, 204, 86);
+    color: white;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.equal{
+    grid-column: span 2;
+}
+
+.zero{
+    grid-column: span 2;
+}
+
+@media (max-width: 600px){
+    .btn{
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .display{
+        font-size: 1.5em;
+    }
+
+    .left-buttons, .right-buttons{
+        gap: 5px;
+    }
+}
